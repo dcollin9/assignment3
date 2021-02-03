@@ -23,10 +23,24 @@ namespace Assignment3DallinCollinsa.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult MyPodcasts()
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult EnterMovies()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EnterMovies(EnterMoviesModel enterMovies)
+        {
+            return View(enterMovies);
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
