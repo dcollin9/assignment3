@@ -26,7 +26,7 @@ namespace Assignment3DallinCollinsa.Models
             throw new NotImplementedException();
         }
 
-        public string edited { get; set; }
+        public bool? edited { get; set; }
 
         public string lentTo { get; set; }
 

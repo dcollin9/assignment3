@@ -1,7 +1,10 @@
 ﻿
 @{
+    ViewBag.Title = "Movie List";
+
 }
 
+<!--brings an inumerable model into the page-->
 @model IEnumerable<Assignment3DallinCollinsa.Models.EnterMoviesModel>
 <div>
     <table>
@@ -18,9 +21,13 @@
             </tr>
         </thead>
         <tbody>
+
+            <!--loop that builds the table from the movie entries-->
             @foreach (Assignment3DallinCollinsa.Models.EnterMoviesModel x in Model)
             {
             <tr>
+                @if (x.title != "Independence Day")
+                {
                 <td>@x.category</td>
                 <td>@x.title</td>
                 <td>@x.year</td>
@@ -29,6 +36,7 @@
                 <td>@x.edited</td>
                 <td>@x.lentTo</td>
                 <td>@x.notes</td>
+                }
             </tr>
             }
         </tbody>

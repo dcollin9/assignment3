@@ -5,7 +5,7 @@
 
 @model Assignment3DallinCollinsa.Models.EnterMoviesModel
 
-<form method="post">
+<form asp-action="EnterMovies" method="post">
 
     <label asp-for="category">Category:</label>
     <input asp-for="category" />
@@ -28,9 +28,14 @@
         <option>R</option>
     </select>
     <br />
-    <label asp-for="edited">Edited:</label>
-    <label asp-for="edited">Yes</label><input asp-for="edited" type="radio" name="YesNo" value="Yes"/>
-    <label asp-for="edited">No</label><input asp-for="edited" type="radio" name="YesNo" value="No"/>
+    <label asp-for="edited">Was the movie edited?</label>
+
+    <select asp-for="edited">
+        <option></option>
+        <option>True</option>
+        <option>False</option>
+
+    </select>
     <br />
     <label asp-for="lentTo">Lent To:</label>
     <input asp-for="lentTo" />

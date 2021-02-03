@@ -37,11 +37,21 @@ namespace Assignment3DallinCollinsa.Controllers
         [HttpPost]
         public IActionResult EnterMovies(EnterMoviesModel enterMovies)
         {
-            return View(enterMovies);
+            //ensures data is valid before putting it into the temporary storage
+            if (ModelState.IsValid)
+            {
+                TempMovieStorage.AddApplication(enterMovies); //calls the AddApplication method in the TempMovieStorage class and passes it the instance of the object
+                Response.Redirect("DisplayMovies");
+            }
+
+            //loads the EnterMovies view and passes it the instanse of enterMovies
+            return View();
         }
 
         public IActionResult DisplayMovies()
         {
+
+            //passes the Movies list
             return View(TempMovieStorage.Movies);
         }
 
