@@ -40,7 +40,10 @@ namespace Assignment3DallinCollinsa.Controllers
             return View(enterMovies);
         }
 
-
+        public IActionResult DisplayMovies()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

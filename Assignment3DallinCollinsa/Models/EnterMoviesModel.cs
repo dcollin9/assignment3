@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Assignment3DallinCollinsa.Models
@@ -20,10 +21,16 @@ namespace Assignment3DallinCollinsa.Models
         [Required]
         public string rating { get; set; }
 
+        internal void Add(List<EnterMoviesModel> movies)
+        {
+            throw new NotImplementedException();
+        }
+
         public string edited { get; set; }
 
         public string lentTo { get; set; }
 
+        [MaxLength(25)]
         public string notes { get; set; }
     }
 }
