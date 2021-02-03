@@ -42,7 +42,7 @@ namespace Assignment3DallinCollinsa.Controllers
 
         public IActionResult DisplayMovies()
         {
-            return View();
+            return View(TempMovieStorage.Movies);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
