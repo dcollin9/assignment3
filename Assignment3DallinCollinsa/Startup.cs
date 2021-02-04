@@ -46,6 +46,7 @@ namespace Assignment3DallinCollinsa
 
             app.UseAuthorization();
 
+            //loads up the index page upon startup
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

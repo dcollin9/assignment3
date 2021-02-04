@@ -28,12 +28,14 @@ namespace Assignment3DallinCollinsa.Controllers
             return View();
         }
 
+        //get method for the EnterMovies view
         [HttpGet]
         public IActionResult EnterMovies()
         {
             return View();
         }
 
+        //post method for the EnterMovies view
         [HttpPost]
         public IActionResult EnterMovies(EnterMoviesModel enterMovies)
         {

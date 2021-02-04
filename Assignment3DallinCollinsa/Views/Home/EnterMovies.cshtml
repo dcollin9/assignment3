@@ -5,6 +5,7 @@
 
 @model Assignment3DallinCollinsa.Models.EnterMoviesModel
 
+<!--Form to submit the movie info-->
 <form asp-action="EnterMovies" method="post">
 
     <label asp-for="category">Category:</label>
@@ -43,6 +44,9 @@
     <label asp-for="notes">Notes:</label>
     <input asp-for="notes" />
     <br />
+
     <button type="submit">Save</button>
+
+    <!--Validates data according to restrictions I set out in the EnterMovies model-->
     <div asp-validation-summary="All"></div>
 </form>

@@ -6,6 +6,9 @@ namespace Assignment3DallinCollinsa.Models
 {
     public class EnterMoviesModel
     {
+
+        //declaring attributes of the EnterMoviesModel
+        
         [Required]
         public string category { get; set; }
 
@@ -21,6 +24,7 @@ namespace Assignment3DallinCollinsa.Models
         [Required]
         public string rating { get; set; }
 
+        //this was added for me, I don't completely understand why but now my program works!
         internal void Add(List<EnterMoviesModel> movies)
         {
             throw new NotImplementedException();
